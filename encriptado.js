@@ -4,25 +4,19 @@ const resultadoEncriptado = document.getElementById('resultadoEncriptado')
 const resultadoDesencriptado = document.getElementById('resultadoDesencriptado')
 
 function encriptar() {
-    //Cesar
-    let txtDesInput = document.getElementById('txtEncriptar').value
+    let txtDesInput = document.getElementById('txtEncriptar').value //Obtener value de input
+    //Cifrar
     let textoNuevo = cifradoCesar(txtDesInput)
-    //XOR
-
-
-
-
-
-
-    resultadoEncriptado.innerHTML = textoNuevo
-    
+    textoNuevo = cifradoXor(textoNuevo)
+    resultadoEncriptado.innerHTML = textoNuevo //Actualizar HTML flex
 }
 
 function desencriptar() {
-    let txtDesInput = document.getElementById('txtDesencriptar').value
-    console.log(txtDesInput)
-    let textoNuevo = descifradoCesar(txtDesInput)
-    resultadoDesencriptado.innerHTML = textoNuevo
+    let txtDesInput = document.getElementById('txtDesencriptar').value//Obtener valor
+    //Descifrar
+    let textoNuevo = cifradoXor(txtDesInput)
+    textoNuevo = descifradoCesar(textoNuevo)
+    resultadoDesencriptado.innerHTML = textoNuevo //Aactualizar HTML
 }
 
 function cifradoCesar(txt) {
@@ -63,4 +57,19 @@ function descifradoCesar(txt) {
         respuesta += letra;
     }
     return respuesta;
+}
+
+function cifradoXor(txt)
+{
+    txt = txt.split("");
+    let xorKey = 'P'; //Clave XOR
+    let longitud = txt.length;
+ 
+    //operacion xor con cada caracter
+    for (let i = 0; i < longitud; i++)
+    {
+        txt[i] = (String.fromCharCode((txt[i].charCodeAt(0)) ^ xorKey.charCodeAt(0)));
+        console.log(txt[i])
+    }
+    return txt.join("");
 }
