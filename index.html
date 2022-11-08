@@ -7,12 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptación</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        div {
+            width: 250px;
+            height: 300px;
+            border-color: black;
+
+            border: 1px solid;
+            border-radius: 3px;
+            display: inline-block;
+            padding: 5px;
+        }
+    </style>
 </head>
 
 <body>
     <h1>Encriptación y desencriptación</h1>
     <input type="text" placeholder="Ingresa texto a encriptar" id="txtEncriptar" name="txtDes"> <br><br>
-    <button onclick="encriptar()">Encriptar</button>
+    <button onclick="encriptar()">Encriptar</button><br><br>
+    <div>
+        <p id="textoTraducido" style="color: gray;">Aquí aparecerá el texto traducido</p>
+    </div>
     <script src="encriptado.js"></script>
 </body>
 
