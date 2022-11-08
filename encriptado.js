@@ -1,26 +1,28 @@
 console.log('ping')
 
-const textoTraducido = document.getElementById('textoTraducido')
-const aux = document.getElementById('xd')
+const resultadoEncriptado = document.getElementById('resultadoEncriptado')
+const resultadoDesencriptado = document.getElementById('resultadoDesencriptado')
 
 function encriptar() {
     //Cesar
     let txtDesInput = document.getElementById('txtEncriptar').value
     let textoNuevo = cifradoCesar(txtDesInput)
     //XOR
-    
 
 
 
 
 
-    textoTraducido.innerHTML = textoNuevo
+
+    resultadoEncriptado.innerHTML = textoNuevo
     
 }
 
 function desencriptar() {
-    let txtDesInput = document.getElementById('txtEncriptar').value
-    textoDesencriptado = descifradoCesar(txtDesInput)
+    let txtDesInput = document.getElementById('txtDesencriptar').value
+    console.log(txtDesInput)
+    let textoNuevo = descifradoCesar(txtDesInput)
+    resultadoDesencriptado.innerHTML = textoNuevo
 }
 
 function cifradoCesar(txt) {
@@ -47,7 +49,7 @@ function cifradoCesar(txt) {
 function descifradoCesar(txt) {
     let letra, respuesta = '';
     let alfabeto = 'abcdefghijklmnñopqrstuvwxyz'
-    let clave = 0
+    let clave = 8
     let cifrado = alfabeto.slice(-clave);
     cifrado += alfabeto.slice(0, alfabeto.length - clave)
     for (let i = 0; i < txt.length; i++) {

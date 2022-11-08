@@ -8,25 +8,29 @@
     <title>Encriptación</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        div {
-            width: 250px;
-            height: 300px;
-            border-color: black;
 
-            border: 1px solid;
-            border-radius: 3px;
-            display: inline-block;
-            padding: 5px;
-        }
     </style>
 </head>
 
 <body>
-    <h1>Encriptación y desencriptación</h1>
-    <input type="text" placeholder="Ingresa texto a encriptar" id="txtEncriptar" name="txtDes"> <br><br>
-    <button onclick="encriptar()">Encriptar</button><br><br>
-    <div>
-        <p id="textoTraducido" style="color: gray;">Aquí aparecerá el texto traducido</p>
+    <h1 class="titulo">Encriptación y desencriptación</h1>
+
+    <div class="flexContainer">
+        <div class="flexCifrado">
+            <input type="text" placeholder="Ingresa texto a encriptar" id="txtEncriptar"> <br><br>
+            <button onclick="encriptar()">Encriptar</button><br><br>
+            <div class="flexResultado">
+                <p id="resultadoEncriptado" style="color: gray;">Aquí aparecerá el texto cifrado</p>
+            </div>
+        </div>
+
+        <div class="flexDescifrado">
+            <input type="text" placeholder="Ingresa texto a desencriptar" id="txtDesencriptar"> <br><br>
+            <button onclick="desencriptar()">Desencriptar</button><br><br>
+            <div class="flexResultado">
+                <p id="resultadoDesencriptado" style="color: gray;">Aquí aparecerá el texto descifrado</p>
+            </div>
+        </div>
     </div>
     <script src="encriptado.js"></script>
 </body>

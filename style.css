@@ -1,0 +1,23 @@
+.flexResultado{
+    width: 250px;
+    height: 300px;
+    border-color: black;
+
+    border: 1px solid;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 5px;
+}
+
+.flexContainer{
+    display: flex;
+}
+
+.flexCifrado{
+    flex: 50%;
+}
+
+.flexDescifrado{
+    flex: 50%;
+}
+
