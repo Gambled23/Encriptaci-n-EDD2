@@ -9,6 +9,7 @@ function encriptar() {
     let textoNuevo = cifradoCesar(txtDesInput)
     textoNuevo = cifradoXor(textoNuevo)
     resultadoEncriptado.innerHTML = textoNuevo //Actualizar HTML flex
+    resultadoEncriptado.style.color = "black"
 }
 
 function desencriptar() {
@@ -17,6 +18,7 @@ function desencriptar() {
     let textoNuevo = cifradoXor(txtDesInput)
     textoNuevo = descifradoCesar(textoNuevo)
     resultadoDesencriptado.innerHTML = textoNuevo //Aactualizar HTML
+    resultadoDesencriptado.style.color = "black"
 }
 
 function cifradoCesar(txt) {
