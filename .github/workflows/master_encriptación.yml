@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'Encriptación'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B9CA54F9B3DD41F3B9A3EC86E57B5C0D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B280B864A00844FB99739E3C33D18EE8 }}
           package: .
